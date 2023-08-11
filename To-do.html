@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>To-do List</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			text-align: center;
+		}
+		p {
+			text-align: left;
+			background-color: yellow;
+			margin: 1em;
+			padding: 1em;
+			font-size: 20pt;
+		}
+	</style>
+</head>
+<body style='background-color:black;'>
+<div class="container" style="background-color: cyan; margin-top: 1em; ">
+	<h1 class="container-fluid page-header" style="background-color: lime; padding: 1em;">TO-DO LIST</h1>
+	<h2 style = 'margin-bottom:3em'>Please write down your task.
+	<form>
+		<label id="label-task">Task</label>
+		<input type="text" id = 'task' placeholder="e.g. homeworks, lesson 1">
+		<select name='statusname' id='completionstatus'>
+			<option value='Finished'>Finished</option>
+			<option value='Pending' selected>Pending</option>
+		</select>
+		<input name='enterbutton' type="button" class='btn btn-success btn-lg' onclick='enter()' value="Enter"><br>
+		<input type='button' class='btn btn-warning btn-lg' id='entryremove' style='margin:1em;' onclick='removerFirst()' value="Remove First Task">
+		<input type='button' class='btn btn-warning btn-lg' id='entryremove' style='margin:1em;' onclick='removerLast()' value="Remove Last Task">
+	</form>
+	<div>
+	</div>
+	</h2>
+</div>
+<script type = 'text/javascript' src="To-do.js">
+</script>
+</body>
+</html>
